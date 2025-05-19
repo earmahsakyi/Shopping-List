@@ -1,129 +1,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
-
-*,
-*::before,
-*::after {
+/* General Reset */
+/* Reset and Fonts */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
-  background-color: #f5f5f5;
+  /* 🔥 Beautiful Gradient Background or You Can Use an Image */
+  background: url('backgroung.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 }
 
+/* 💎 Glassmorphism Container */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px 40px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Header */
 header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header img {
+  width: 60px;
+  margin-bottom: 10px;
 }
 
 header h1 {
-  font-weight: 300;
-  margin-left: 10px;
+  font-size: 28px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-.container {
-  max-width: 500px;
-  margin: 30px auto;
-  padding: 20px;
+/* Form and Inputs */
+.form-control {
+  margin-bottom: 15px;
 }
 
-/* Form & Input */
-.form-input {
-  width: 100%;
-  font-size: 18px;
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
-}
-
+.form-input,
 .form-input-filter {
-  margin-top: 20px;
   width: 100%;
-  font-size: 18px;
-  margin-bottom: 20px;
-  padding: 10px;
+  padding: 12px 16px;
   border: none;
-  border-bottom: 1px solid #ccc;
-  background: transparent;
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-input-filter:focus {
   outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 5px #74ebd5;
 }
 
 /* Buttons */
-.btn {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #444;
-}
-
-.btn-link {
-  font-size: 16px;
-  background-color: transparent;
-  color: #333;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
+.btn,
 .btn-clear {
-  margin-top: 20px;
-  width: 100%;
+  background-color: #5c6bc0;
+  color: white;
+  padding: 12px 16px;
   font-size: 16px;
-  background-color: transparent;
-  color: #333;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
 }
 
+.btn i {
+  margin-right: 8px;
+}
+
+.btn:hover,
 .btn-clear:hover {
-  background-color: #f1f1f1;
+  background-color: #3f51b5;
 }
 
-.text-red {
-  color: red;
-}           
-      
+/* Filter Section */
+.filter {
+  margin: 20px 0;
+}
 
-/* Items */
-
+/* Items List */
 .items {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.items li {
-  display: flex;
-  justify-content: space-between;
-  width: 45%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px 15px;
-  margin: 0 5px 20px;
-  font-weight: 700;
-}
-
-input[type='checkbox'] {
+  list-style: none;
+  padding-left: 0;
   margin-bottom: 20px;
 }
 
+.items li {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.items li:hover {
+  background: rgba(255, 255, 255, 1);
+}
 @media (max-width: 500px) {
   .items li {
     width: 100%;
